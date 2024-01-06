@@ -1,0 +1,30 @@
+{
+  "version": "2.0",
+  "envId": "{{env.envId}}",
+  "functionRoot": "./functions",
+  "functions": [
+    {
+      "name": "request",
+      "timeout": 60,
+      "runtime": "Nodejs18.15",
+      "envVariables": {
+        "envId": "{{env.envId}}",
+        "payKey": "{{env.payKey}}",
+        "payPid": "{{env.payPid}}",
+        "payType": "{{env.payType}}",
+        "payNotifyUrl": "{{env.payNotifyUrl}}",
+        "payReturnUrl": "{{env.payReturnUrl}}"
+      }
+    },
+    {
+      "name": "pay_notify",
+      "timeout": 60,
+      "runtime": "Nodejs18.15",
+      "envVariables": {
+        "envId": "{{env.envId}}",
+        "payKey": "{{env.payKey}}",
+        "payPid": "{{env.payPid}}"
+      }
+    }
+  ]
+}
